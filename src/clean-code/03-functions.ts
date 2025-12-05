@@ -35,5 +35,40 @@ interface Movie {
 
     console.log("Crear actor", birthdate);
     return true;
+
+    // Continuar - arreglar errores: tipado result, evitar uso de "else", tipo de dato retorno, interface (> 3 parámetros), retornar valor en lugar de crear una variable y darle valor (ahorra espacio en memoria)
+    const getPayAmount = ({
+      isDead = false,
+      isSeparated = true,
+      isRetired = false,
+    }): number => {
+      if (isDead) return 1500;
+
+      if (isSeparated) return 2500;
+
+      if (isRetired) return 3000;
+
+      return 4000;
+
+      // return isRetired ? 3000 : 4000;
+    };
+    //   const getPayAmount = ({ isDead = false, isSeparated = true, isRetired = false }) => {
+    //     let result;
+    //     if ( isDead ) {
+    //         result = 1500;
+    //     } else {
+    //         if ( isSeparated ) {
+    //             result = 2500;
+    //         } else {
+    //             if ( isRetired ) {
+    //                 result = 3000;
+    //             } else {
+    //                 result = 4000;
+    //             }
+    //         }
+    //     }
+
+    //     return result;
+    // }
   }
 })();
